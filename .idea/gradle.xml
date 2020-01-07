@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/webflux" />
             <option value="$PROJECT_DIR$/webmvc" />
+            <option value="$PROJECT_DIR$/webmvc-async" />
           </set>
         </option>
         <option name="useQualifiedModuleNames" value="true" />

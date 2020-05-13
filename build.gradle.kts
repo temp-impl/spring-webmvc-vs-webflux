@@ -3,15 +3,15 @@ import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 plugins {
     base
-    kotlin("jvm") version "1.3.61"
-    kotlin("plugin.spring") version "1.3.61"
-    id("org.springframework.boot") version "2.2.4.RELEASE"
+    kotlin("jvm") version "1.3.72"
+    kotlin("plugin.spring") version "1.3.72"
+    id("org.springframework.boot") version "2.2.7.RELEASE"
     id("io.spring.dependency-management") version "1.0.9.RELEASE"
     id("org.jlleitschuh.gradle.ktlint") version "9.1.1"
 }
 
 tasks.wrapper {
-    gradleVersion = "6.1"
+    gradleVersion = "6.4"
 }
 
 allprojects {
@@ -43,6 +43,9 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8")
+
+        testImplementation("io.kotest:kotest-runner-junit5-jvm:4.0.5")
+        testImplementation("io.kotest:kotest-assertions-core-jvm:4.0.5")
     }
 
     dependencyManagement {

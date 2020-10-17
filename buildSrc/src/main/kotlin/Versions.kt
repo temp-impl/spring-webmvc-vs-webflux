@@ -1,7 +1,7 @@
 const val GRADLE_VERSION = "6.7"
 
 const val KOTLIN_VERSION = "1.4.10"
-const val KTLINT_GRADLE_VERSION = "9.1.1"
+const val KTLINT_GRADLE_VERSION = "9.4.1"
 const val KOTEST_VERSION = "4.3.0"
 
 const val SPRING_BOOT_VERSION = "2.3.4.RELEASE"

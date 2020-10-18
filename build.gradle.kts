@@ -50,8 +50,11 @@ subprojects {
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8")
 
+        testImplementation("org.springframework.boot:spring-boot-starter-test") {
+            exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+        }
         testImplementation("io.kotest:kotest-runner-junit5-jvm:$KOTEST_VERSION")
-        testImplementation("io.kotest:kotest-assertions-core-jvm:$KOTEST_VERSION")
+        testImplementation("io.kotest:kotest-extensions-spring:$KOTEST_VERSION")
     }
 
     tasks.withType<Test> {
@@ -60,7 +63,7 @@ subprojects {
 
     tasks.withType<KotlinCompile> {
         kotlinOptions {
-            freeCompilerArgs = listOf("-Xjsr305=strict")
+            freeCompilerArgs = listOf("-Xjsr305=strict", "-Xjvm-default=all")
             jvmTarget = "12"
         }
     }
